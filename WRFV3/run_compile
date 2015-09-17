@@ -1,0 +1,18 @@
+#!/bin/tcsh
+#PBS -l walltime=1:00:00
+#PBS -l mem=5GB
+#PBS -l ncpus=4
+#PBS -j oe
+#PBS -q normal
+#PBS -l wd
+#PBS -l software=intel-cc/2:intel-fc/2
+
+module load intel-fc/15.0.3.187
+module load intel-cc/15.0.3.187
+module load openmpi/1.8.8
+module load netcdf/4.3.3.1
+setenv WRFIO_NCD_LARGE_FILE_SUPPORT 1
+setenv J "-j $PBS_NCPUS"
+
+./compile em_real
+

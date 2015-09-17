@@ -784,7 +784,7 @@ print "$ENV{WRF_MARS}" ;
 
 close CONFIGURE_WRF ;
 
-printf "Configuration successful! \n" ;
+printf "Configuration successful! To build the model, please run: qsub run_compile . \n" ;
 printf "------------------------------------------------------------------------\n" ;
 
 
