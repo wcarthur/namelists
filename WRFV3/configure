@@ -60,6 +60,11 @@ if `pwd | grep ' ' > /dev/null ` ; then
   echo '*****************************************************************************'
 fi
 
+echo
+printf -v f "%68s" ; printf "%s\n" "${f// /%}"
+echo 'You are running the customized configure script for NCI RAIJIN cluster'
+printf -v f "%68s" ; printf "%s\n" "${f// /%}"
+echo
 
 # lifted from the configure file for mpich; 00/03/10 jm
 #
@@ -284,7 +289,7 @@ if test -z "$PDHF5" ; then
   fi
 fi
 
-USENETCDFF=""  # see below
+USENETCDFF="-lnetcdff"  # see below
 if [ -n "$NETCDF" ] ; then
   echo "Will use NETCDF in dir: $NETCDF"
 # for 3.6.2 and greater there might be a second library, libnetcdff.a .  Check for this and use 
@@ -1054,3 +1059,9 @@ if [ -n "$NETCDF4" ] ; then
     fi
   fi
 fi
+
+printf -v f "%85s" ; printf "%s\n" "${f// /%}"
+echo "Assistance: climate_help@nf.nci.org.au"
+echo "Information: http://climate-cms.unsw.wikispaces.net/WRF"
+printf -v f "%85s" ; printf "%s\n" "${f// /%}"
+echo
