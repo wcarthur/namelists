@@ -6,6 +6,9 @@ module load openmpi/1.8.8
 module load netcdf/4.3.3.1
 export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 
+# Un-comment to compile with chemistry
+#export WRF_CHEM=1
+
 ./configure
 
 # -V: to send over all the environment variables, in particular from the modules loaded
