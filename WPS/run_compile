@@ -1,8 +1,9 @@
 #!/bin/bash
 
-module swap intel-fc intel-fc/15.0.3.187
-module swap intel-cc intel-cc/15.0.3.187
-module swap openmpi openmpi/1.8.8
+module purge
+module load intel-fc/15.0.3.187
+module load intel-cc/15.0.3.187
+module load openmpi/1.8.8
 module load netcdf/4.3.3.1
 module load ncl/6.3.0
 
