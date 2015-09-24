@@ -1,8 +1,8 @@
 &share
  wrf_core = 'ARW',
- max_dom = 2,
- start_date = '2006-08-16_12:00:00','2006-08-16_12:00:00',
- end_date   = '2006-08-16_18:00:00','2006-08-16_12:00:00',
+ max_dom = 1,
+ start_date = '2000-01-24_12:00:00','2006-08-16_12:00:00',
+ end_date   = '2000-01-25_12:00:00','2006-08-16_12:00:00',
  interval_seconds = 21600
  io_form_geogrid = 2,
 /
@@ -23,7 +23,7 @@
  truelat1  =  30.0,
  truelat2  =  60.0,
  stand_lon = -98.0,
- geog_data_path = '/glade/p/work/wrfhelp/WPS_GEOG/'
+ geog_data_path = '/projects/WRF/data/WPS_GEOG'
 /
 
 &ungrib
