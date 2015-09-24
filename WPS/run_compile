@@ -1,6 +1,8 @@
 #!/bin/bash
 
 module purge
+module load pbs
+module load dot
 module load intel-fc/15.0.3.187
 module load intel-cc/15.0.3.187
 module load openmpi/1.8.8
