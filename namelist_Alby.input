@@ -44,22 +44,19 @@
  feedback			     = 1 
  dx                                  = 36000, 12000, 4000,  
  dy                                  = 36000, 12000, 4000,
- vortex_interval                     = 15, 15, 15,
- max_vortex_speed                    = 40, 40, 40,
- corral_dist                         = 8, 15, 15, 
- track_level                         = 50000,
- time_to_move			     = 0.,
  num_metgrid_levels 	 	     = 18,
  num_metgrid_soil_levels	     = 0,
- use_surface			     = .true.,
+ use_surface			     = .false.,
  lowest_lev_from_sfc		     = .false.,
+ p_top_requested                     = 5000.,
+ ztop                                = 25000.,
 /
 
 &physics
  mp_physics                    	     = 4, 4, 4,
- ra_lw_physics                       = 4, 4, 4,
- ra_sw_physics                       = 4, 4, 4,
- radt                                = 30, 30, 30,
+ ra_lw_physics                       = 5, 5, 5,
+ ra_sw_physics                       = 5, 5, 5,
+ radt                                = 10, 10, 10,
  sf_sfclay_physics                   = 91, 91, 91,
  sf_surface_physics                  = 1, 1, 1,
  bl_pbl_physics                      = 1, 1, 1,
@@ -73,6 +70,8 @@
  maxens2 			     = 3,
  maxens3 			     = 16,
  ensdim 			     = 144,
+ o3input                             = 0,
+ aer_opt                             = 2,
 /
 
 &fdda
@@ -103,7 +102,7 @@
 &bdy_control
  spec_bdy_width                      = 5,
  spec_zone                           = 1,
- relax_zone                          = 5,
+ relax_zone                          = 4,
  specified                           = .true.,
  nested                              = .false., .true., .true.,
 /
