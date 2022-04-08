@@ -1,0 +1,43 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 3,
+ start_date = '1978-03-30_12:00:00','1978-03-30_12:00:00','1978-03-30_12:00:00',
+ end_date   = '1978-04-05_00:00:00','1978-04-05_00:00:00','1978-04-05_00:00:00',
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+ opt_output_from_geogrid_path = '/g/data/w85/DFES_SWHA_2017-2020/wrf/alby/geogrid/lcc',
+ debug_level = 0,
+
+/
+
+&geogrid
+ parent_id         = 0,   1,   2,
+ parent_grid_ratio = 1,   5,   5,
+ j_parent_start    = 1,   79, 407,
+ i_parent_start    = 1,   40,  230,
+ e_we              = 221, 641, 901,
+ e_sn              = 257, 671, 901,
+ dx                = 25000,
+ dy                = 25000,
+ map_proj =  'lambert',
+ ref_lat   =  -32.5,
+ ref_lon   =  112.,
+ truelat1 = -20.0,
+ truelat2 = -45.0,
+ stand_lon = 112.,
+ pole_lat = 90.,
+ pole_lon = 0.0,
+ geog_data_res     = '10m','2m','30s'
+ geog_data_path = '/projects/WRF/data/WPS_GEOG_20190418',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'PRES',
+/
+
+&metgrid
+ fg_name =  'SST', 'SFC', 'PRES',
+ io_form_metgrid = 2,
+ opt_output_from_metgrid_path = '/g/data/w85/DFES_SWHA_2017-2020/wrf/alby/metgrid/lcc',
+/
