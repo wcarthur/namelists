@@ -1,0 +1,39 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 3,
+ start_date = '2021-04-07_00:00:00','2021-04-07_00:00:00','2021-04-07_00:00:00',
+ end_date   = '2021-04-12_00:00:00','2021-04-12_00:00:00','2021-04-12_00:00:00',
+ interval_seconds = 21600
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   0,   1,   2
+ parent_grid_ratio =   1,   5,   5, 
+ j_parent_start    = 1,   79, 407,
+ i_parent_start    = 1,   40,  230,
+ e_we              = 221, 641, 901,
+ e_sn              = 257, 671, 901,
+ dx                = 0.25,
+ dy                = 0.25,
+ geog_data_res     =  'usgs_lakes+usgs_30s','usgs_lakes+usgs_30s','usgs_lakes+usgs_30s',
+ map_proj = 'lat-lon',
+ ref_lat   =  -32.5,
+ ref_lon   =  112.,
+ truelat1 = -32.5,
+ truelat2 = -60.0,
+ stand_lon = 112.,
+ geog_data_path = '/g/data/sx70/data/WPS_GEOG_v4/'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2, 
+ opt_output_from_metgrid_path = '/scratch/w85/cxa547/seroja/metgrid',
+/
+
